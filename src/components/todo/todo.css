@@ -1,8 +1,19 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.todo-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: brown;
+}
+
+button {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px black solid;
+}
+
+.todo-data {
+  margin-top: 10px;
+  border: 1px wheat solid;
+  border-radius: 5px;
 }
 
 .logo {
@@ -28,15 +39,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .logo {
+  a:nth-of-type(2) .logo {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }
