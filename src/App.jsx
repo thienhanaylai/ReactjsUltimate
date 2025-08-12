@@ -6,9 +6,7 @@ import "./components/todo/todo.css";
 import { useState } from "react";
 
 const App = () => {
-  const [todoList, setTodoList] = useState([
-    { id: 1, value: "Learning React" },
-  ]);
+  const [todoList, setTodoList] = useState([]);
 
   const addTodo = (value) => {
     const newValue = {
@@ -23,10 +21,14 @@ const App = () => {
       <div className="todo-container">
         <div className="todo-title">Todo List</div>
         <TodoNew addTodo={addTodo} />
-        <TodoData todoList={todoList} />
-        <div className="todo-image">
-          <img className="logo" src={react} alt="" />
-        </div>
+
+        {todoList.length === 0 ? (
+          <div className="todo-image">
+            <img className="logo" src={react} alt="" />
+          </div>
+        ) : (
+          <TodoData todoList={todoList} />
+        )}
       </div>
     </>
   );

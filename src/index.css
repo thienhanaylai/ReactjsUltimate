@@ -47,8 +47,3 @@ h1 {
     background-color: #f9f9f9;
   }
 }
-
-.container-text {
-  display: flex;
-  justify-content: space-around;
-}

@@ -11,6 +11,12 @@ button {
   cursor: pointer;
 }
 
+.container-text {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
 .todo-data {
   margin-top: 10px;
   border: 1px wheat solid;
