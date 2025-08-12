@@ -16,6 +16,12 @@ const App = () => {
     setTodoList([...todoList, newValue]);
   };
 
+  const delTodo = (id) => {
+    const newTodo = newTodo.filter((todo) => {
+      return todo.id !== id;
+    });
+    setTodoList([...newTodo]);
+  };
   return (
     <>
       <div className="todo-container">
@@ -27,7 +33,7 @@ const App = () => {
             <img className="logo" src={react} alt="" />
           </div>
         ) : (
-          <TodoData todoList={todoList} />
+          <TodoData todoList={todoList} delTodo={delTodo} />
         )}
       </div>
     </>
