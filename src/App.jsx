@@ -1,4 +1,3 @@
-import "./App.css";
 import TodoData from "./components/todo/TodoData";
 import TodoNew from "./components/todo/TodoNew";
 import react from "./assets/react.svg";
@@ -17,7 +16,8 @@ const App = () => {
   };
 
   const delTodo = (id) => {
-    const newTodo = newTodo.filter((todo) => {
+    let newTodo = todoList;
+    newTodo = newTodo.filter((todo) => {
       return todo.id !== id;
     });
     setTodoList([...newTodo]);
